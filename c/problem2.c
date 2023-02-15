@@ -1,12 +1,16 @@
 #include <stdio.h>
 
+// Sum of even Fibonacci numbers below 4 million.
 int main(int argc, char const *argv[])
 {
-	const int MAX_INDEX = 11;
+	const int MAX_LIMIT = 4000000;
+
+	int n = 0;
 	int total = 0;
 
-	for (int n = 0; n < MAX_INDEX; n++) {
+	while (total < MAX_LIMIT) {
 		total += evenFibo(n);
+		n++;
 	}
 
 	printf("%d\n", total);
